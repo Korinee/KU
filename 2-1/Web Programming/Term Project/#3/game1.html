@@ -1,0 +1,72 @@
+<HTML>
+	
+<HEAD>
+    <meta charset="utf-8">
+    <style type="text/css">
+        body {
+            background-color: #FBFBEF;
+            font-family: "티머니 둥근바람 Regular";
+        }
+    </style>
+    <SCRIPT LANGUAGE="JavaScript">
+        function playGame(choice) {
+            with (document.game) {
+                comp = Math.floor((Math.random() * 2) + 1); 
+                        
+                var choiceName;
+                if (comp == 1) choiceName = "홀";
+                if (comp == 2) choiceName = "짝";
+
+                msg.value = "상대가 " + choiceName + "를 내서 ";
+                        
+                switch(choice) { 
+                    case 1 : 
+                    if (comp == 1) {  
+                        win.value++; msg.value += "승리!";     
+                        break; 
+                    }
+                    if (comp == 2) {  
+                        loss.value++; msg.value += "패배!";      
+                        break; 
+                    }
+                    case 2 : 
+                    if (comp == 2) {  
+                        win.value++; msg.value += "승리!";      
+                        break; 
+                    }
+                    if (comp == 1) {  
+                        loss.value++; msg.value += "패배!";     
+                        break; 
+                    }
+                }
+            }
+        }
+        function loadEvent(){
+            alert("홀짝선택 게임 페이지에 입장하시겠습니까?");
+        }
+    </SCRIPT> 
+</HEAD>
+        
+<BODY align="center" onLoad="loadEvent()">
+    <br><h2> ☞홀짝 게임☜ </h2><br><br>
+    <FORM NAME="game">
+        <TABLE BORDER="3" CELLPADDING="5" align="center" height="300">
+            <TR> 
+                <TD ALIGN="center"><B> 선택하세요 </B>:</TD>
+                <TD ALIGN="center"><INPUT TYPE="button" VALUE="홀" onClick="playGame(1);"></td>
+                <TD ALIGN="center"><INPUT TYPE="button" VALUE="짝" onClick="playGame(2);"></td>
+            </TR>
+            <TR> 
+                <TD COLSPAN="4" ALIGN="center"> 
+                <INPUT TYPE="text" NAME="msg" SIZE="45"></TD>
+            </TR>
+            <TR> 
+                <TD COLSPAN="4" ALIGN="center"> <b> 
+                <INPUT TYPE="text" NAME="win" READONLY VALUE="0" SIZE="1">번 승리 /  
+                <INPUT TYPE="text" NAME="loss" READONLY VALUE="0" SIZE="1">번 패배</B></TD>
+            </TR>
+        </TABLE>
+    </FORM>
+</BODY>
+        
+</HTML>
