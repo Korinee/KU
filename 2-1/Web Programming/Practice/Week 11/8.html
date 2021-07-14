@@ -1,0 +1,32 @@
+<HTML>
+ 
+<HEAD> 
+    <TITLE> 함수 </TITLE>
+    <SCRIPT LANGUAGE="JavaScript">
+            function WriteFunc1()
+            {
+                document.write("WriteFunc1 함수 사용하기 <BR><BR>");
+            }
+            function WriteFunc2(strName)
+            {
+                document.write("WriteFunc2 함수 사용하기 <BR>");
+                document.write(strName + "님 안녕하세요 <BR><BR>");
+            }
+            function WriteFunc3(intNum1, intNum2)
+            {
+                document.write("WriteFunc3 함수 사용하기 <BR>");
+                var intSum;
+                intSum = intNum1 + intNum2;
+                return intSum;
+            }
+    </SCRIPT> 
+</HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+    WriteFunc1();
+    WriteFunc2("박경민");
+    document.write("두 수의 합은 " + WriteFunc3(5, 10) + " 입니다."); 
+</SCRIPT> 		
+<BODY> 
+</BODY>
+
+</HTML>
