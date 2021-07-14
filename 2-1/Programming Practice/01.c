@@ -11,7 +11,6 @@
 enum CASES { NORMAL, NEXT, EXIT };
 
 // 자연수 N까지 합계 출력 
-/*
 int main()
 {
 	int		sum;
@@ -54,7 +53,7 @@ int main()
 	}
 
 	return 0;
-}*/
+}
 
 // 자연수 N까지 합계 출력 - 함수 버전
 /*
