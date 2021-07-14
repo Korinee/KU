@@ -1,0 +1,39 @@
+<HTML>
+	
+<HEAD>
+    <TITLE> Window 객체 1 </TITLE>
+    <SCRIPT LANGUAGE="JAVASCRIPT"> 
+        
+        window.defaultStatus = "브라우저 크기/위치 조정하기"
+        
+        function resize_by(x, y)
+        {
+            window.resizeBy(x, y);
+        }
+        
+    </SCRIPT>
+</HEAD>
+    
+<BODY onLoad="window.resizeTo(500, 300)">
+    <FORM>
+        <HR>
+        브라우저 크기 조정 : 
+        <INPUT TYPE="button" VALUE="확대"
+          onClick="resize_by(20, 20)">
+        <INPUT TYPE="button" VALUE="축소"
+          onClick="resize_by(-20, -20)">
+        <HR>
+        브라우저 위치 이동 :
+        <INPUT TYPE="button" VALUE="상"
+          onClick="window.moveBy(0,-20)">
+        <INPUT TYPE="button" VALUE="하"
+          onClick="window.moveBy(0,20)">
+        <INPUT TYPE="button" VALUE="좌"
+          onClick="window.moveBy(-20,0)">
+        <INPUT TYPE="button" VALUE="우"
+          onClick="window.moveBy(20,0)">
+        <HR>
+    </FORM>
+</BODY>
+
+</HTML>
