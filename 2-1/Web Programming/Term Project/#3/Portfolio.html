@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style type="text/css">
+    body { 
+        background-color: #FBFBEF;
+        font-family: "배달의민족 주아";
+        margin-top: 50;
+        margin-bottom: 0;
+        margin-left: 50;
+        margin-right: 0;
+        text-align: center
+    }
+    .text1 {
+        cursor: help;
+        display: block;
+        font-size: 2em;
+        margin-top: 0.67em;
+        margin-bottom: 0.67em;
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: bold
+    }
+    .text2 {
+        display: block;
+        font-size: 20;
+        margin-top: 0.83em;
+        margin-bottom: 0.83em;
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: bold;
+        color: #3D6AAB
+    }
+    .text3 {
+        font-size: 18
+    }
+    </style>
+    <SCRIPT LANGUAGE="JavaScript"> 
+        function myFunc(name) { 
+            myWin = window.open("","popup_sample","width=500,height=400"); 
+            myWin.document.open(); 
+            myWin.document.write("<HTML><HEAD><TITLE>포트폴리오 요약</TITLE></HEAD>"); 
+            myWin.document.write("<BODY bgColor='#E1EFAB'>");
+            myWin.document.write("<FONT face='티머니 둥근바람 Regular'>");
+            myWin.document.write("<P ALIGN='center'><B><font size='5'><Br>안녕하세요? <br> " + name + "의 <font color='#FA8F14' size='6'>자기소개 페이지</font>입니다 :) <br><br>나이 : 21살<br> 생일 : 8월 29일 <BR> 본가 : 광주광역시 <BR> 취미 : 유도<BR> 학력 : 건국대학교 글로컬캠퍼스</font></B></P>"); 
+            myWin.document.write("</FONT></BODY></HTML>"); 
+            myWin.document.close(); 
+        }
+        function color() { 
+            document.fgColor = "#8AA8D4" 
+        } 
+    </SCRIPT>
+</head>
+
+<body>
+    <div class = "text1" onClick="myFunc('박경민');">포토폴리오</div>
+    <HR>
+        <div class = "text2" onClick="color()"><p><b>기본사항</b></p></div><br>
+        <div class = "text3"><p>이름 : 박경민 </p>
+        <p>나이 : 21살 </p>
+        <p>생년월일 : 2001.08.29</p>
+        <p>출생지 : 광주광역시 남구</p>
+        <p>취미 : 유도</p></div><br>
+    <HR>
+        <div class = "text2" onClick="color()"><p><b>학력사항</b></p></div><br>
+        <div class = "text3"><p>진제초등학교 2014년 졸업</p>
+        <p>문성중학교 2017년 졸업</p>
+        <p>문성고등학교 2020년 졸업</p>
+        <p>건국대학교 2020년 입학</p></div><br>
+    <HR>
+        <div class = "text2" onClick="color()"><p><b>가족사항</b></p></div><br>
+        <div class = "text3"><p>아버지</p>
+        <p>어머니</p>
+        <p>형</p><br></div>
+    <HR>
+        <div class = "text2" onClick="color()"><p><b>IT 보유기술 & 숙련도</b></p></div><br>
+        <div class = "text3"><p>C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size = "4" face = "티머니 둥근바람 Regular">●●●○○</font></p>
+        <p>HTML&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size = "4" face = "티머니 둥근바람 Regular">●●●○○</font></p>
+        <p>PYTHON&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size = "4" face = "티머니 둥근바람 Regular">●●○○○</font></p>
+        <p>UNIX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size = "4" face = "티머니 둥근바람 Regular">●●○○○</font></p>
+        <p>MySQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size = "4" face = "티머니 둥근바람 Regular">●○○○○</font></p></div>
+    <HR>
+        <div class = "text2" onClick="color()"><p><b>연락</b></p></div><br>
+        <div class = "text3"><p>이메일 : pgm3117@kku.ac.kr </p>
+        <p>카카오톡 : pgm3117</p>
+        <p>인스타그램 : kyungmin_aa</p></div>
+    <HR>
+    <div style="cursor:pointer;" onclick="window.scrollTo(0,0);"> TOP </div>
+</body>
+
+</html>
