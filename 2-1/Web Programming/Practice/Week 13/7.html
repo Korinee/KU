@@ -1,0 +1,25 @@
+<HTML>
+	
+<HEAD>
+    <TITLE> Document 객체 2 </TITLE>
+    <SCRIPT LANGUAGE="JavaScript"> 
+        
+            function myFunc(name) { 
+            myWin = window.open("","popup_sample","width=400,height=300"); 
+            myWin.document.open(); 
+            myWin.document.write("<HTML><HEAD><TITLE>SAMPLE</TITLE></HEAD>"); 
+            myWin.document.write("<BODY bgColor='gold'>"); 
+            myWin.document.write("<P ALIGN='center'><B>안녕하세요?  "
+                 + name + "님 </B></P>"); 
+            myWin.document.write("</BODY></HTML>"); 
+            myWin.document.close(); 
+            } 
+        
+    </SCRIPT> 
+</HEAD> 
+      
+<BODY> 
+<INPUT TYPE="button" onClick="myFunc('박경민');" VALUE="팝업만들기"> 
+</BODY> 
+    
+</HTML>
