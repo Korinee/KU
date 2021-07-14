@@ -1,0 +1,89 @@
+<HTML>
+	
+<HEAD>
+    <meta charset="utf-8">
+    <style type="text/css">
+        body {
+            background-color: #FBFBEF;
+            font-family: "티머니 둥근바람 Regular";
+        }
+
+        table {
+            border-width:1px; 
+            border-color:black; 
+            border-style:solid;
+            background-color: #292a2b;
+        }
+
+		.btn{
+        font-weight:bold; 
+        font-size:12pt; 
+        background-color:#74b2cf; 
+		padding-top:3px;
+        width:51
+        } 
+	</STYLE> 
+		
+	<SCRIPT LANGUAGE="JavaScript"> 
+		function cal(intNum){ 
+			CalForm.result.value += intNum; 
+		} 
+			
+		function answer(){ 
+			CalForm.result.value = eval(document.CalForm.result.value); 
+		} 
+			
+		function clearcal(){ 
+			CalForm.result.value = ""; 
+		}
+		function loadEvent(){
+			alert("계산기 페이지에 입장하시겠습니까?");
+		}
+	</SCRIPT> 
+</HEAD>
+	
+<BODY align="center" onLoad="loadEvent()">
+    <br><h2> ☞계산기☜ </h2><br><br>
+	<FORM NAME="CalForm"> 
+	<TABLE BORDER="1" CELLSPACING="0" CELLPADDING="10" ALIGN="center"> 
+		<TR> 
+			<TD HEIGHT="0" BGCOLOR="gray"> 
+				<INPUT TYPE="text" NAME="result" SIZE="25">  
+			</TD> 
+		</TR> 
+		<TR> 
+			<TD> 
+				<INPUT TYPE="button" VALUE=" 7 " onclick="cal('7')" CLASS="btn">  
+				<INPUT TYPE="button" VALUE=" 8 " onclick="cal('8')" CLASS="btn">  
+				<INPUT TYPE="button" VALUE=" 9 " onclick="cal('9')" CLASS="btn">  
+				<INPUT TYPE="button" VALUE=" + " onclick="cal('+')" CLASS="btn">  
+			</TD> 
+		</TR> 
+		<TR> 
+			<TD> 
+				<INPUT TYPE="button" VALUE=" 4 " onclick="cal('4')" CLASS="btn">  
+				<INPUT TYPE="button" VALUE=" 5 " onclick="cal('5')" CLASS="btn">  
+				<INPUT TYPE="button" VALUE=" 6 " onclick="cal('6')" CLASS="btn">  
+				<INPUT TYPE="button" VALUE=" x " onclick="cal('*')" CLASS="btn">  
+			</TD> 
+		</TR> 
+		<TR> 
+			<TD> 
+				<INPUT TYPE="button" VALUE=" 1 " onclick="cal('1')" CLASS="btn">  
+				<INPUT TYPE="button" VALUE=" 2 " onclick="cal('2')" CLASS="btn">  
+				<INPUT TYPE="button" VALUE=" 3 " onclick="cal('3')" CLASS="btn">  
+				<INPUT TYPE="button" VALUE=" ÷ " onclick="cal('/')" CLASS="btn">  
+			</TD> 
+		</TR> 
+		<TR> 
+			<TD> 
+				<INPUT TYPE="button" VALUE=" 0 " onclick="cal('0')" CLASS="btn">  
+				<INPUT TYPE="button" VALUE=" . " onclick="cal('.')" CLASS="btn">  
+				<INPUT TYPE="button" VALUE=" C " onclick="clearcal()" CLASS="btn">  
+				<INPUT TYPE="button" VALUE=" = " onclick="answer()" CLASS="btn">  
+			</TD> 
+		</TR> 
+	</TABLE> 
+	</FORM> 
+</BODY>
+</HTML>
