@@ -1,0 +1,40 @@
+<HTML>
+
+	<HEAD>
+		<STYLE TYPE="text/css">
+			A.text {color:black;text-decoration:none;
+			font:x-small georgia,serif;font-weight:bold;}
+		</STYLE>
+		
+		<SCRIPT LANGUAGE="JavaScript">
+
+			var rate = 500;
+			
+			var Color1 = "purple";
+			var Color2 = "green";
+			var Color3 = "blue";
+			
+			var i=0;
+			
+			function LinkColor(){
+		  i++;
+		  if (i==1) C = Color1;
+		  if (i==2) C = Color2;
+		  if (i==3) C = Color3 ;  
+			   
+		  BannerLink.style.color=C;
+		  if (i > 2) i = 0;
+		  setTimeout("LinkColor()", rate);    
+			}
+
+		</SCRIPT>
+	</HEAD>
+		
+	<BODY BGCOLOR="powderblue" onLoad="LinkColor()">
+	  <A NAME="BannerLink" ID="BannerLink" HREF="http://www.ehan.co.kr" 
+	  TARGET=_top CLASS="text">
+	  <H3><IMG SRC="Flower1.jpg" ALIGN="middle" HEIGHT="30"> 이한 출판사
+	  </A></H3>
+	</BODY>
+	
+</HTML>
