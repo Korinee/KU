@@ -1,0 +1,137 @@
+<HTML>
+
+	<HEAD>
+		<SCRIPT LANGUAGE="JavaScript">
+
+			function ImageSize() {
+				if ( backImg.style.pixelWidth < 500 ) { 
+					backImg.style.pixelWidth += 3; 
+					backImg.style.pixelHeight += 2; 
+					setTimeout("ImageSize()", 10);
+				}
+			}
+	
+			function theDate() {
+				var now = new Date(); 
+				var year = now.getFullYear();
+				var month = now.getMonth() + 1;
+				var date = now.getDate(), day; 
+			
+				switch(now.getDay())
+				{
+					  case 0 : day = "일요일";             break;
+					  case 1 : day = "월요일";             break;
+					  case 2 : day = "화요일";             break;
+					  case 3 : day = "수요일";             break;
+					  case 4 : day = "목요일";             break;
+					  case 5 : day = "금요일";             break;
+					  case 6 : day = "토요일";             break;  
+			
+				}
+				document.write("<BR><B>" + year + "년 " + month + "월 " 
+					+ date + "일 " + day + "</B>");
+				document.write("<BR><B>" + now.getHours() + "시 " 
+					+ now.getMinutes() + "분 " + now.getSeconds() + "초</B>");
+			}
+			
+			function TimeMessage() {
+					currentNow = new Date();
+					theHours = currentNow.getHours();
+					
+					if (theHours < "6") {
+						document.write
+						("<BR><B> 늦게까지 안주무시고 방문해 주셔서 감사합니다. </B>");
+					}
+					else if (theHours < "12") {
+						document.write
+						("<BR><B> 오늘도 즐거운 하루 되세요. </B>");
+					}
+					else if (theHours < "13") {
+						document.write
+						("<BR><B> 맛있는 점심식사 시간이네요. </B>");
+					}
+					else if (theHours < "18") {
+						document.write
+						("<BR><B> 언제나 저희 홈페이지에 방문해 주셔서 감사합니다. </B>");
+					}
+					else if (theHours < "24") {
+						document.write
+						("<BR><B> 오늘 하루 즐거우셨나요. 좋은 꿈 꾸세요. </B>");
+					}
+			}
+			
+			var stateMsg = "행복하세요^^";
+			var intpos = 0;
+			
+			function StateMessage() {
+				status = stateMsg.substring(intpos, stateMsg.length) 
+				+ " " + stateMsg.substring(0, intpos);
+				intpos++;
+				if (intpos > stateMsg.length) intpos = 0;
+				setTimeout("StateMessage()",200);
+			}
+			
+			var intNo = 12; 
+			var xp, yp;   
+			var i, intWidth = 700, intHeight = 600;
+			var Multiple=5;
+			
+			xp = new Array();
+			yp = new Array();
+			
+			for (i = 0; i < intNo; ++ i) {  
+				xp[i] = Math.random()*(intWidth-25); 
+				yp[i] = Math.random()*intHeight;
+			
+				document.write("<DIV ID=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +
+					  "; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"> <IMG SRC=\"snow.gif\" border=\"0\"></DIV>");
+			  }  
+			
+			function snowIE() { 
+			  for (i = 0; i < intNo; ++ i) { 
+					xp[i] += (Math.random()-0.5)*Multiple;
+					yp[i] += (Math.random())*Multiple/2;
+				if (yp[i] > intHeight) {
+					xp[i] = Math.random()*(intWidth-25);
+					yp[i] = 0;
+					  }
+			
+			  document.all["dot"+i].style.pixelTop = yp[i];
+			  document.all["dot"+i].style.pixelLeft = xp[i];
+			  }
+			  setTimeout("snowIE()", 20);
+			}
+			
+			snowIE();
+
+		</SCRIPT> 
+	</HEAD>
+		
+	<BODY onLoad="ImageSize()">
+		<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" 
+		STYLE="border-collapse: collapse" WIDTH="700">
+		  <TR>
+			<TD width="700" BGCOLOR="blue">
+			<P ALIGN="center"><STRONG><BLINK><FONT SIZE="4" COLOR="yellow">
+				박경민의 미니홈에 방문하신것을 환영합니다.
+			</FONT></BLINK></STRONG></TD>
+		  </TR>
+		  <TR>
+			<TD ALIGN="center" WIDTH="700">
+			<IMG ID="backImg" BORDER="0" SRC="Flower3.JPG" ALIGN="center"></TD>
+		  </TR>
+		  <TR>
+			  <TD ALIGN="center">
+					<SCRIPT LANGUAGE=JAVASCRIPT>
+
+						theDate();
+						TimeMessage();
+						StateMessage();
+
+					</SCRIPT>
+			</TD>
+		</TR>
+		</TABLE>
+	</BODY>
+	
+</HTML>
