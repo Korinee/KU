@@ -1,0 +1,74 @@
+<HTML>
+	
+	<HEAD>
+		<TITLE> 계산기 </TITLE>
+		<STYLE TYPE="text/css"> 
+			.btn{font-weight:bold; font-size:12pt; background-color:gray; 
+			padding-top:3px;width:51} 
+		</STYLE> 
+		
+		<SCRIPT LANGUAGE="JavaScript"> 
+			function cal(intNum){ 
+				CalForm.result.value += intNum; 
+			} 
+			
+			function answer(){ 
+				CalForm.result.value = eval(document.CalForm.result.value); 
+			} 
+			
+			function clearcal(){ 
+				CalForm.result.value = ""; 
+			} 
+		</SCRIPT> 
+	</HEAD>
+	
+	<BODY>
+		<FORM NAME="CalForm"> 
+		<TABLE BORDER="1" BGCOLOR="silver" CELLSPACING="0" CELLPADDING="5"  
+				STYLE="border-width:1px; border-color:black; 
+				border-style:solid;" ALIGN="center"> 
+			<TR> 
+				<TD HEIGHT="0" BGCOLOR="gray"> 
+					<INPUT TYPE="text" NAME="result" SIZE="30">  
+				</TD> 
+			</TR> 
+	
+			<TR> 
+				<TD> 
+					<INPUT TYPE="button" VALUE=" 7 " onclick="cal('7')" CLASS="btn">  
+					<INPUT TYPE="button" VALUE=" 8 " onclick="cal('8')" CLASS="btn">  
+					<INPUT TYPE="button" VALUE=" 9 " onclick="cal('9')" CLASS="btn">  
+					<INPUT TYPE="button" VALUE=" + " onclick="cal('+')" CLASS="btn">  
+				</TD> 
+			</TR> 
+	
+			<TR> 
+				<TD> 
+					<INPUT TYPE="button" VALUE=" 4 " onclick="cal('4')" CLASS="btn">  
+					<INPUT TYPE="button" VALUE=" 5 " onclick="cal('5')" CLASS="btn">  
+					<INPUT TYPE="button" VALUE=" 6 " onclick="cal('6')" CLASS="btn">  
+					<INPUT TYPE="button" VALUE=" * " onclick="cal('*')" CLASS="btn">  
+					</TD> 
+			</TR> 
+	
+			<TR> 
+				<TD> 
+					<INPUT TYPE="button" VALUE=" 1 " onclick="cal('1')" CLASS="btn">  
+					<INPUT TYPE="button" VALUE=" 2 " onclick="cal('2')" CLASS="btn">  
+					<INPUT TYPE="button" VALUE=" 3 " onclick="cal('3')" CLASS="btn">  
+					<INPUT TYPE="button" VALUE=" / " onclick="cal('/')" CLASS="btn">  
+				</TD> 
+			</TR> 
+	
+			<TR> 
+				<TD> 
+					<INPUT TYPE="button" VALUE=" 0 " onclick="cal('0')" CLASS="btn">  
+					<INPUT TYPE="button" VALUE=" . " onclick="cal('.')" CLASS="btn">  
+					<INPUT TYPE="button" VALUE=" C " onclick="clearcal()" CLASS="btn">  
+					<INPUT TYPE="button" VALUE=" = " onclick="answer()" CLASS="btn">  
+				</TD> 
+			</TR> 
+		</TABLE> 
+		</FORM> 
+	</BODY>
+</HTML>
