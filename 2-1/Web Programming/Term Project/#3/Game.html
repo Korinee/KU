@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style type="text/css">
+
+    body {
+    background-color: #FBFBEF;
+    background-repeat : no-repeat;
+    background-size : cover;
+    background-attachment: 0;
+    }
+
+	A.text {color: black;
+	text-decoration: none;
+	font-weight: bold
+	}
+
+	body{
+	border-color: black
+	}
+
+	div{
+	background-color: #FBFBEF;
+	margin-top: 2%;
+	margin-bottom: 0%;
+	margin-left: 10%;
+	margin-right:10%;
+	height: 80%
+	}
+	
+	table{
+	border-radius: 8px;
+	}
+
+	</STYLE>	
+	
+	<SCRIPT LANGUAGE="JavaScript">
+	
+		function MouseOver(cell, newcolor) {
+			cell.bgColor = newcolor;
+		}
+
+		function MouseOut(cell, newcolor) {
+			cell.bgColor = newcolor;
+		}
+	</SCRIPT>
+</head>
+
+<BODY>
+<div>
+	<br>
+	<TABLE BORDER="0" CELLPADDING="150" CELLSPACING="90" align="center" height="100" border-radius : 5px>
+		<TR>
+			<TD ALIGN="center" WIDTH="200" BGCOLOR="#F1CCCC" onMouseover="MouseOver(this, '#D6CECD');" onMouseout="MouseOut(this, '#F1CCCC');">
+			<A HREF="game1.html" TARGET="main" CLASS="text">
+			<FONT FACE="티머니 둥근바람 Regular"><SPAN STYLE="font-size:20pt;">홀짝<br>게임</SPAN></FONT></A></TD>
+	  
+			<TD ALIGN="center" WIDTH="200" BGCOLOR="#ECE7AC" onMouseover="MouseOver(this, '#D4D3C0');" onMouseout="MouseOut(this, '#ECE7AC');">
+			<A HREF="game2.html" target="main" CLASS="text">
+			<FONT FACE="티머니 둥근바람 Regular"><SPAN STYLE="font-size:20pt;">숫자<br>게임</SPAN></FONT></A></TD>
+	  
+			<TD ALIGN="center" WIDTH="200" BGCOLOR="#B0E0F7" onMouseover="MouseOver(this, '#C8D4D7');" onMouseout="MouseOut(this, '#B0E0F7');">
+			<A HREF="game3.html" TARGET="main" CLASS="text">
+			<FONT FACE="티머니 둥근바람 Regular"><SPAN STYLE="font-size:20pt;">계산기</SPAN></FONT></A></TD>
+		</TR>
+	</TABLE>
+</div>
+</body>
+	
+</htmlL>
