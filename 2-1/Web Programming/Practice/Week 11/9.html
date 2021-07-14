@@ -1,0 +1,59 @@
+<HTML>
+ 
+<HEAD> 
+    <TITLE> 구구단 </TITLE>
+</HEAD>
+    
+<BODY>
+<H1><CENTER> 구구단표 </CENTER></H3><BR>
+    
+<TABLE ALIGN= "center" BORDER=1 CELLSPACING=0 CELLPADDING=2>
+    
+<TR>
+    
+<SCRIPT LANGUAGE="JavaScript">   
+    var i, j, x, y, result
+        
+    x= prompt("구구단을 계산할 첫번째 숫자를 입력하시오.")
+    y= prompt("구구단을 계산할 두번째 숫자를 입력하시오.")
+    
+    for(i=1; i<=9; i++)
+    {
+        document.write("<TD ALIGN=center BGCOLOR=yellow HEIGHT=30 VALIGN=middle><B>");
+        document.write(i + "단");
+        document.write("</B></TD>");
+    }
+        
+    document.write("</TR>");
+
+    for(i=1; i<=9; i++)
+	{
+		document.write("<TR>");
+	
+		for(j=1; j<=9; j++)
+		{
+		    if((i==x) && (j==y)) {
+		     	document.write("<TD BGCOLOR=silver HEIGHT=30 VALIGN=MIDDLE>");
+	   	  	    document.write("<FONT size=4 COLOR=BLUE><B>");
+	    	     }
+		    else {
+	   	  	    document.write("<FONT COLOR=BLACK>");
+	   	 	    document.write("<TD HEIGHT=30 VALIGN=MIDDLE>");
+		} 
+	
+		result = i * j;
+		document.write(i + " X " + j + " = ");
+		document.write(result + "<BR>");
+	
+		document.write("</B></FONT></TD>");
+	   }
+	
+	    document.write("</TR>");
+	}
+	
+</SCRIPT>
+
+</TABLE>
+</BODY>
+
+</HTML>
