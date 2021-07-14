@@ -1,0 +1,98 @@
+<HTML>
+
+<HEAD>
+    <meta charset="utf-8">
+    <style type="text/css">
+        body {
+            background-color: #FBFBEF;
+            font-family: "티머니 둥근바람 Regular";
+        }
+        
+        .wrap {
+            height: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .button {
+            width: 120px;
+            height: 40px;
+            font-family: '티머니 둥근바람 Regular';
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            font-weight: 500;
+            color: #000;
+            background-color: #fff;
+            border: none;
+            border-radius: 45px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .button:hover {
+            background-color: #235eaa;
+            box-shadow: 0px 15px 20px rgba(62, 108, 160, 0.4);
+            color: #fff;
+            transform: translateY(-7px);
+        }
+    </style>
+
+    <SCRIPT LANGUAGE="JavaScript">
+        var result = Math.floor(Math.random() * 10) + 1;
+             
+        var bingoCnt = 0;
+            
+        function guessNum(){
+            var intValue = document.getElementById("inputNum");
+            intValue = parseInt(intValue.value);
+
+            if (isNaN(intValue)){
+                alert("자연수만 입력 가능합니다." + typeof intValue);
+                document.num.focus();
+                return;
+            }
+             
+            bingoCnt++;
+            if (intValue==result){
+                alert ("축하합니다!\r\n귀하는 " + bingoCnt + "번째 맞추셨습니다.");
+            }
+            else if (intValue > result){
+                alert ("땡! 더 작은 수를 입력하세요.\r\n귀하는 " + bingoCnt + "번째 시도중입니다.");
+                document.num.value = "";
+                document.frmName1.num.focus();
+            }
+            else if (intValue < result){
+                alert ("땡! 더 큰 수를 입력하세요.\r\n귀하는 " + bingoCnt + "번째 시도중입니다.");
+                document.num.value = "";
+                document.frmName1.num.focus();
+            }
+        }
+                
+        function newGame(){
+            result = Math.floor(Math.random() * 10) + 1;
+            bingoCnt = 0;
+            document.frmName1.num.value = "";
+            document.frmName1.num.focus();
+        }
+
+        function loadEvent(){
+		    alert("숫자맞추기 게임 페이지에 입장하시겠습니까?");
+	    }  
+    </SCRIPT>
+</HEAD>
+    
+<BODY align="center" onLoad="loadEvent()">
+    <br><h2> ☞숫자 맞추기 게임☜ </h2><br><br>
+    <H3> 1 ~ 10 사이 숫자 입력 </H3>
+    <INPUT TYPE="number" id="inputNum" VALUE="">
+    <div class="wrap">
+        <button class="button" onClick="guessNum()">정답</button>
+        <button class="button" onClick="newGame()">리셋</button>
+    </div>
+</BODY>
+
+</HTML>
