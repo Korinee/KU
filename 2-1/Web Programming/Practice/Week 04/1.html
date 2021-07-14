@@ -1,0 +1,81 @@
+<html>
+
+<head>
+	<title> 회원 정보 입력 </title>
+</head>
+<body bgcolor = "#DDAD00">
+	<p align = "center">
+		<font size = "4" color = "blue">
+		<b> 회원 정보 입력 </b></font>
+	</p>
+	<hr>
+	<form action = "OK.html" method = "post">
+		<table width = "600" height = "350"
+			border = "1" cellpadding = "5" align = "center">
+			<tr>
+				<td> 비밀번호 </td>
+				<td><input type = "text" name = "ID"
+					size = "10"></td>
+			</tr>
+			<tr>
+				<td> 이름 </td>
+				<td><input type = "text" name = "name"
+					size = "10"></td>
+			</tr>
+			<tr>
+				<td> 전화번호 </td>
+				<td><input type = "text" name = "tell"
+					size = "3" value = "02">
+					-<input name = "tel2" size = "4">-
+				<input name = "tel3" size = "4"></td>
+			</tr>
+			<tr>
+				<td> 직업 </td>
+				<td><select size = "1" name = "job">
+					<option selected> 학생 </option>
+					<option> 회사원 </option>
+					<option> 프로그래머 </option>
+					<option> 무직 </option>
+					</select></td>
+			</tr>
+			<tr>
+				<td> 성별 </td>
+				<td>
+					<input type = "radio" name = "btn"
+					value = "male"
+					checked>남자&nbsp;&nbsp;
+					<input type = "radio" name = "btn"
+					value = "female">여자
+				</td>
+			</tr>
+			<tr>
+				<td> 취미 </td>
+				<td>
+					<input type = "checkbox" name = "hoppy"
+					value  = "reading">독서&nbsp;&nbsp;
+					<input type = "checkbox" name = "hoppy"
+					value  = "game">게임&nbsp;&nbsp;
+					<input type = "checkbox" name = "hoppy"
+					value  = "movie">영화감상&nbsp;&nbsp;
+					<input type = "checkbox" name = "hoppy"
+					value  = "music">음악감상&nbsp;&nbsp;
+					<input type = "checkbox" name = "hoppy"
+					value  = "soccer">축구</td>
+			</tr>
+			<tr>
+				<td> 자기 소개하는 글 </td>
+				<td> <textarea rows = "7" cols = "60" name = "Intro">
+					자기를 소개하는 글을 쓰세요
+				</textarea></td>
+			</tr>
+			<tr>
+				<td colspan = "2" align = "center">
+					<input type = "submit" value = "등록하기">
+						&nbsp;&nbsp;
+					<input type = "rest" value = "취소하기"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+
+</html>
