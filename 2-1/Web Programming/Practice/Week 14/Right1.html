@@ -1,0 +1,34 @@
+<HTML>
+
+	<HEAD>
+		<SCRIPT LANGUAGE="JavaScript">
+
+			function ImageSize() {
+				if ( backImg.style.pixelWidth < 500 ) { 
+					backImg.style.pixelWidth += 3; 
+					backImg.style.pixelHeight += 2; 
+					window.setTimeout("ImageSize()", 10);
+				}
+			}
+
+		</SCRIPT> 
+	</HEAD>
+		
+	<BODY onLoad="ImageSize()">
+		<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" 
+		STYLE="border-collapse: collapse" WIDTH="700">
+		  <TR>
+			<TD width="700" BGCOLOR="blue">
+			<P ALIGN="center"><STRONG><BLINK><FONT SIZE="4" 
+				COLOR="yellow">박경민의 미니홈에 방문하신것을 환영합니다.
+			</FONT></BLINK></STRONG></TD>
+		  </TR>
+		  <TR>
+			<TD ALIGN="center" WIDTH="700">
+			<IMG ID="backImg" BORDER="0" src="Flower3.JPG" 
+			ALIGN="center"></TD>
+		  </TR>
+		</TABLE>
+	</BODY>
+	
+</HTML>
