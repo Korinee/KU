@@ -1,0 +1,49 @@
+<HTML>
+	<HEAD>
+		<TITLE> 숫자 맞추기 게임 </TITLE>
+		<SCRIPT LANGUAGE="JavaScript">
+			 var result = Math.floor(Math.random()*1000)%100;
+			 
+			 var bingoCnt = 0;
+			
+			 function guessNum(){
+				 var intValue = document.frmName1.num.value;
+				 if (isNaN(intValue)){
+					 alert("입력은 숫자형만 가능합니다.");
+					 document.frmName1.num.focus();
+					 return;
+				  }
+			 
+				  bingoCnt++;
+				  if (intValue==result){
+					  alert ("축하드립니다.\r\n귀하는 " + bingoCnt + "번째 맞추셨습니다.");
+				  }
+				  else if (intValue > result){
+					  alert ("틀렸습니다. 더 작은수를 입력해 보세요.\r\n귀하는 " + bingoCnt + "번째 시도중입니다.");
+					  document.frmName1.num.focus();
+				  }
+				  else if (intValue < result){
+					  alert ("틀렸습니다. 더 큰수를 입력해 보세요.\r\n귀하는 " + bingoCnt + "번째 시도중입니다.");
+					  document.frmName1.num.focus();
+				  }
+			 }
+				
+			 function newGame(){
+				 result = Math.floor(Math.random()*1000)%100;
+				 bingoCnt = 0;
+				 document.frmName1.num.value = "";
+				 document.frmName1.num.focus();
+			 }	
+		</SCRIPT>
+	</HEAD>
+	
+	<BODY>
+		<H3> 1에서 100사이의 숫자를 입력하세요 </H3>
+		<FORM NAME="frmName1">
+		<INPUT TYPE="text" NAME="num" VALUE="">
+		<INPUT TYPE="button" VALUE="맞추기" onClick="guessNum()">
+		<INPUT TYPE="button" VALUE="새로하기" onClick="newGame()">
+		</form>
+	</BODY>
+	
+</HTML>
