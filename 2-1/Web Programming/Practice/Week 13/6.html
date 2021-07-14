@@ -1,0 +1,46 @@
+<HTML>
+	
+<HEAD>
+<TITLE> Document 객체 1 </TITLE>
+    <SCRIPT LANGUAGE="JavaScript"> 
+        
+        function myFunc() 
+        { 
+            document.fgColor = "white" 
+            document.linkColor = "yellow" 
+            document.vlinkColor = "silver" 
+            document.alinkColor = "red" 
+            document.bgColor = "black" 
+        } 
+        
+    </SCRIPT> 
+</HEAD> 
+      
+<BODY BGCOLOR="#FFCC66" TEXT="#000000" LINK="red" VLINK="#009933" ALINK="blue"> 
+    <SCRIPT LANGUAGE="JavaScript"> 
+        
+        document.write("링크 텍스트의 색상 : "
+         + document.linkColor + "<BR>"); 
+        document.write("방문했던 링크 텍스트의 색상 : "
+         + document.vlinkColor + "<BR>"); 
+        document.write("클릭시 링크 텍스트의 색상 : "
+         + document.alinkColor + "<BR>"); 
+        document.write("텍스트의 색상 : "
+         + document.fgColor + "<BR>"); 
+        document.write("배경 색상 : "
+         + document.bgColor + "<BR>"); 
+            
+        document.write("쿠키정보 : " + document.cookie + "<BR>"); 
+        document.write("문서의 수정일자 : "
+         + document.lastModified + "<BR>"); 
+        document.write("이전페이지 : " + document.referrer + "<BR>"); 
+        document.write("문서의 제목 : " + document.title + "<BR>"); 
+        document.write("문서의 URL : " + document.URL + "<BR>"); 
+        
+    </SCRIPT> 
+    <P><A HREF="https://www.kku.ac.kr/mbshome/mbs/wwwkr/index.do">
+        건국대학교 홈페이지</A>
+    <P><INPUT TYPE="button" onClick="myFunc()" VALUE="색 바꾸기"> 
+</BODY>
+    
+</HTML>
