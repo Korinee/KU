@@ -1,0 +1,115 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <style type="text/css">
+        a { 
+            text-decoration: none; 
+            color: grey
+        }
+        body { 
+            background-color: #FBFBEF;
+            font-family: "티머니 둥근바람 Regular"
+        }
+        .text1 {
+            text-align: center;
+            display: block;
+            font-size: 60;
+             margin-top: 0.83em;
+            margin-bottom: 0.83em;
+            margin-left: 0;
+            margin-right: 0;
+            font-weight: bold
+        }
+        .text2 {
+            text-align: center;
+            font-size: 25
+        }
+        .text3 {
+            text-align: center;
+            display: block;
+            font-size: 20;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            margin-left: 0;
+            margin-right: 0;
+            font-weight: bold
+        }
+        a:visited { 
+            text-decoration: none
+        }
+        a:hover { 
+            text-decoration: none
+        }
+        a:focus { 
+            text-decoration: none
+        }
+         a:hover, a:active { 
+            text-decoration: none
+        }
+    </style>
+
+    <SCRIPT LANGUAGE="JavaScript">
+
+        function theDate() {
+        var now = new Date(); 
+        var year = now.getFullYear();
+        var month = now.getMonth() + 1;
+        var date = now.getDate(), day; 
+          
+        switch(now.getDay())
+        {
+        case 0 : day = "일요일";             break;
+        case 1 : day = "월요일";             break;
+        case 2 : day = "화요일";             break;
+        case 3 : day = "수요일";             break;
+        case 4 : day = "목요일";             break;
+        case 5 : day = "금요일";             break;
+        case 6 : day = "토요일";             break;  
+        }
+    
+        document.write("<BR><B>" + year + "년 " + month + "월 " + date + "일 " + day + "</B>");
+        document.write("<BR><B>" + now.getHours() + "시 " + now.getMinutes() + "분 " + now.getSeconds() + "초 입니다. <br></B>");
+        }
+
+        function TimeMessage() {
+            currentNow = new Date();
+            theHours = currentNow.getHours();
+                
+            if (theHours < "5") {
+                document.write("<BR><B> 새벽까지 방문해주셔서 감사합니다! </B><br><br><Br>")
+            }
+            else if (theHours < "10") {
+                document.write("<BR><B> 좋은 아침 입니다! </B>");
+            }
+            else if (theHours < "14") {
+                document.write("<BR><B> 맛있는 점심 드세요! </B>");
+            }
+            else if (theHours < "17") {
+                document.write("<BR><B> 맛있는 저녁 드세요! </B>");
+            }
+            else if (theHours < "24") {
+                document.write("<BR><B> 주무실 시간입니다! </B>");
+            }
+        }
+    </SCRIPT>
+</head>
+
+<body>
+    <div class='text1'>
+        <br><br> 회원가입이<br>완료되었습니다.
+    </div>
+
+    <div class='text2'>
+        <SCRIPT LANGUAGE=JAVASCRIPT>
+            theDate();
+        </SCRIPT>
+        <SCRIPT LANGUAGE=JAVASCRIPT>
+            TimeMessage();
+        </SCRIPT><br><br><br><br>
+    </div>
+
+    <div class='text3'>
+        <a href = "Main.html"> 홈페이지 바로가기</a>
+    </div>
+</body>
+</html>
