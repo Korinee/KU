@@ -1,0 +1,85 @@
+<HTML>
+	
+	<HEAD>
+		<TITLE> 가위, 바위, 보 게임 </TITLE>
+	  <SCRIPT LANGUAGE="JavaScript">
+			function playGame(choice) {
+				with (document.game) {
+					comp = Math.round((Math.random() * 2) + 1); 
+					
+					var choiceName;
+					if (comp == 1) choiceName = "바위";
+					if (comp == 2) choiceName = "보";
+					if (comp == 3) choiceName = "가위";
+					
+					msg.value = "선택한 것은 " + choiceName + " ;  ";
+					
+					switch(choice) { 
+						case 1 : 
+								 if (comp == 1) {  
+									 draw.value++; msg.value += "무승부!";
+									 break; }
+								 if (comp == 2) {  
+									 loss.value++;  msg.value += "패배!";     
+									 break; }
+								 if (comp == 3) {  
+									 win.value++; msg.value += "승리!";      
+									 break; }
+						case 2 : 
+								 if (comp == 1) {  
+									 win.value++;  msg.value += "승리!";      
+									 break; }
+								 if (comp == 2) {  
+									 draw.value++; msg.value += "무승부!"; 
+									 break; }
+								 if (comp == 3) {  
+									 loss.value++; msg.value += "패배!";     
+									 break; }
+						case 3 : 
+								 if (comp == 1) {  
+									 loss.value++;  msg.value += "패배!";     
+									 break; }
+								 if (comp == 2) {  
+									 win.value++; msg.value += "승리!";     
+									 break; }
+								 if (comp == 3) {  
+									 draw.value++; msg.value += "무승부!"; 
+									 break; }
+					 }
+					msg.value += '  계속!';
+				}
+			}
+	  </SCRIPT> 
+	</HEAD>
+	
+	<BODY>
+		<FONT SIZE=5> 가위, 바위, 보 게임 </FONT><HR>
+		<FORM NAME="game">
+			<TABLE BORDER="3" CELLPADDING="5" >
+			  <TR> 
+				<TD ALIGN="center"><B> 선택하세요 </B>:</TD>
+			<TD ALIGN="center"><INPUT TYPE="button" VALUE="가위" onClick="playGame(3);"></td>
+			<TD ALIGN="center"><INPUT TYPE="button" VALUE="바위" onClick="playGame(1);"></td>
+			<TD ALIGN="center"><INPUT TYPE="button" VALUE=" 보 " onClick="playGame(2);"></td>
+			  </TR>
+			  <TR> 
+				<TD COLSPAN="4" ALIGN="center"> 
+				  <INPUT TYPE="text" NAME="msg" SIZE="45">
+				</TD>
+			  </TR>
+			  <TR> 
+				<TD COLSPAN="4" ALIGN="center"> <b> 
+				  <INPUT TYPE="text" NAME="win" READONLY VALUE="0" SIZE="2">
+				  번 승리, 
+				  <INPUT TYPE=text NAME="loss" READONLY VALUE="0" SIZE="2">
+				  번 패배, 
+				  <INPUT TYPE="text" NAME="draw" READONLY VALUE="0" SIZE="2">
+						  번 무승부 </B></TD>
+			  </TR>
+			</TABLE>
+		</FORM>
+	</BODY>
+	
+	</HTML>
+	
+	
