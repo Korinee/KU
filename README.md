@@ -1,3 +1,3 @@
 # KU
-소속된 대학교의 컴퓨터 공학과에 진학하면서 배웠던 전공 과목들에 대해 정리하고 업로드하고 있습니다.   
-I'm organizing and uploading the major subjects I learned when I entered the department of computer engineering at my university.
+소속된 대학교의 컴퓨터 공학과 전공과목에서 작성한 코드들을 정리하여 업로드하고 있습니다.   
+I am organizing and uploading the code I created for my major in computer engineering at my university.
